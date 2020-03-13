@@ -59,6 +59,7 @@
   </style>
   <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
   </style>
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/hititle.js"></script>
 </head>
 </html>
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
@@ -331,7 +332,7 @@
   
     <div class="pattern-center ">
       <div class="pattern-attachment-img">
-        <img src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn@1.3img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/about.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+        <img src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn@1.3/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/about.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
       </div>
       <header class="pattern-header ">
         <h1 class="entry-title">
@@ -455,6 +456,21 @@ bot_ui_ini()
       </div>
       <p style="color: #666666;">&copy 2020</p>
     </div>
+    <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>
+  var now = new Date();
+  function createtime() {
+    var grt= new Date("02/25/2020 16:44:00");//此处修改你的建站时间或者网站上线时间
+    now.setTime(now.getTime()+250);
+    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()",250);</script>
     <div class="footer-device">
     <p style="font-family: 'Ubuntu', sans-serif;">
         <span style="color: #b9b9b9;">Theme <a target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Pluto</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i><a>&nbsp Powered by 秋半初贰</a>
@@ -463,7 +479,6 @@ bot_ui_ini()
     </div>
   </div><!-- .site-info -->
 </footer>
-
 
 
 <!-- <script src="/js/tocbot.js"></script> -->
@@ -694,7 +709,7 @@ $(document).ready(function() {
       </li>
     
   </ul>
-  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2020 Pluto</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
@@ -761,5 +776,13 @@ $(document).ready(function() {
     })
   });
 </script>
+  <!-- 点击出现社会主义彩色文字 -->
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js"></script>
+  <!-- 点击出现爱心 -->
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+  <!-- 背景添加动态线条，随鼠标动 -->
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/canvas-nest.min.js"></script>
+  <!-- 禁用一些按键 -->
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/noSomeKey.js"></script>
 </body>
 </html>
