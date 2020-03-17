@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sfh640.coding-pages.com/"/>
-  <updated>2020-03-17T07:06:26.463Z</updated>
+  <updated>2020-03-17T12:55:10.279Z</updated>
   <id>http://sfh640.coding-pages.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>移动应用开发《微信小程序源码》</title>
+    <link href="http://sfh640.coding-pages.com/2020/03/17/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%BA%90%E7%A0%81/"/>
+    <id>http://sfh640.coding-pages.com/2020/03/17/微信小程序源码/</id>
+    <published>2020-03-17T12:12:45.000Z</published>
+    <updated>2020-03-17T12:55:10.279Z</updated>
+    
+    <summary type="html">
+    
+      小程序
+    
+    </summary>
+    
+      <category term="资源" scheme="http://sfh640.coding-pages.com/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+      <category term="源码" scheme="http://sfh640.coding-pages.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>利用jsDeliver+github实现免费CDN</title>
@@ -151,7 +171,7 @@
     <link href="http://sfh640.coding-pages.com/2020/03/13/%E5%B0%8F%E7%B1%B3%E5%86%85%E6%B5%8B%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
     <id>http://sfh640.coding-pages.com/2020/03/13/小米内测资源分享/</id>
     <published>2020-03-13T05:57:24.000Z</published>
-    <updated>2020-03-17T03:09:07.934Z</updated>
+    <updated>2020-03-17T12:55:37.728Z</updated>
     
     <summary type="html">
     
