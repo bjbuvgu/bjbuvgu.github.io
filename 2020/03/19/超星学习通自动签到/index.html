@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Category: 技术 | Pluto——孤独的√3</title>
+  <title itemprop="name">超星学习通自动签到 | Pluto——孤独的√3</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -328,171 +328,266 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img data-src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/banner/coding.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/jishu/xuexitongqiandao.jpg);" src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/jishu/xuexitongqiandao.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      超星学习通自动签到</h1>
+      <p class="entry-census">
+        <span>
+          <a href="http://qbce1999.club/">
+            <img src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="http://qbce1999.club/">Pluto</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-3-19<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">野生技术协会</h1>
-    <span class="cat-des">
-      <p>Geek – Only for Love</p>
-    </span>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <ul>
+<li>本站系本网编辑转载，转载目的在于传递更多信息，并不代表本网赞同其观点和对其真实性负责。如涉及作品内容、版权和其它问题，请在30日内与本网联系，我们将在第一时间删除内容！</li>
+<li>[声明]本站文章版权归原作者所有，内容为作者个人观点，本站只提供参考并不构成任何投资及应用建议！</li>
+<li>本站拥有对此声明的最终解释权！</li>
+</ul>
+<p>因为疫情影响，虽然现在暂时不用去学校了，但是每天都要上网课，对于下午晚上的网课还算好，至于早上的网课，很多小伙伴表示作息还没调过来，不想起来。<br>那么有没有一种办法能够让脚本自动帮我们签到呢？</p>
+<p>正好也是这几天，在b站看到了个教程，这里给大家分享下。</p>
+<p>软件目前运行正常并且没有被检测的风险，当然了，由于不可抗力因素的影响，软件可能会失效或导致账号被后台检测，所以希望各位还是正常签到，好好学习。</p>
+<p>作者总共给了两个程序，一个是exe（Windows运行程序）一个是py（python）文件<br>（文末会给两个软件的下载地址）</p>
+<h2 id="对于exe-使用方法"><a href="#对于exe-使用方法" class="headerlink" title="对于exe(使用方法)"></a>对于exe(使用方法)</h2><p>直接在电脑上运行就好了</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313004901292.png" alt></p>
+<p>这里面会出现自己的选修课，点击一门课程，再点击启动，调整频率就好了。<br>该脚本就会按调整的频率检测学习通上选课发布签到的情况，直到老师发布签到，该程序终止。</p>
+<h2 id="对于py文件-原理"><a href="#对于py文件-原理" class="headerlink" title="对于py文件(原理)"></a>对于py文件(原理)</h2><p><strong> 我们先通过抓包工具获取学习通上的数据，发现登录学习通需要两个数据<br>一个是uid，一个是cookie,得到了这两个数据，就相当于登录了学习通，也就可以获取自己选修的课程。<br>然后再通过某种方式得到签到的数据包，于是我们可以对选修的课程的签到数据包进行检测，每几秒或更长时间检测一次，直到检测到签到的数据包，签到完成，程序继续运行。 </strong></p>
+<p>整个程序，大致原理如此。<br>因此我们就可以借此写一个python的程序了<br>至于uid和cookie，你可以通过第一个exe程序扫二维码获得，在它运行的时候，会自动生成一个</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313010739637.png" alt></p>
+<p>用笔记本打开该文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313010821140.png" alt></p>
+<p>这里面有uid和cookie</p>
+<h3 id="python代码"><a href="#python代码" class="headerlink" title="python代码"></a>python代码</h3><pre><code class="python">import requests,json,time
+
+#填入Cookie
+headers={
+  &quot;Cookie&quot;: &quot;&quot;,
+  &quot;User-Agent&quot;: &quot;Mozilla/5.0 (iPad; CPU OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 ChaoXingStudy/ChaoXingStudy_3_4.3.2_ios_phone_201911291130_27 (@Kalimdor)_11391565702936108810&quot;
+}
+#填入uid
+uid=&quot;&quot;
+coursedata=[]
+activeList=[]
+course_index=0
+speed=10
+status=0
+status2=0
+activates=[]
+def backclazzdata():
+    global coursedata
+    url=&quot;http://mooc1-api.chaoxing.com/mycourse/backclazzdata?view=json&amp;rss=1&quot;
+    res=requests.get(url,headers=headers)
+    cdata=json.loads(res.text)
+    if(cdata[&#39;result&#39;]!=1):
+        print(&quot;课程列表获取失败&quot;)
+        return 0
+    for item in cdata[&#39;channelList&#39;]:
+        if(&quot;course&quot; not in item[&#39;content&#39;]):
+            continue
+        pushdata={}
+        pushdata[&#39;courseid&#39;]=item[&#39;content&#39;][&#39;course&#39;][&#39;data&#39;][0][&#39;id&#39;]
+        pushdata[&#39;name&#39;]=item[&#39;content&#39;][&#39;course&#39;][&#39;data&#39;][0][&#39;name&#39;]
+        pushdata[&#39;imageurl&#39;]=item[&#39;content&#39;][&#39;course&#39;][&#39;data&#39;][0][&#39;imageurl&#39;]
+        pushdata[&#39;classid&#39;]=item[&#39;content&#39;][&#39;id&#39;]
+        coursedata.append(pushdata)
+    print(&quot;获取成功&quot;)  
+    #print(coursedata)  
+    printdata()
+
+def printdata():
+    global course_index,speed
+    index=1
+    for item in coursedata:
+        print(str(index)+&quot;.课程名称:&quot;+item[&#39;name&#39;])
+        index+=1
+    course_index=int(input(&quot;请输入序号以设定监控课程&quot;))-1
+    print(&quot;监控课程设定完成&quot;)
+    speed=int(input(&quot;请输入监控频率&quot;))
+    print(&quot;监控频率设置完毕&quot;)
+    res=input(&quot;输入start启动监控&quot;)
+    if(res==&quot;start&quot;):
+        startsign()
+    else:
+        printdata    
+
+
+
+def taskactivelist(courseId,classId):
+    global activeList
+    url=&quot;https://mobilelearn.chaoxing.com/ppt/activeAPI/taskactivelist?courseId=&quot;+str(courseId)+&quot;&amp;classId=&quot;+str(classId)+&quot;&amp;uid=&quot;+uid
+    res=requests.get(url,headers=headers)
+    data=json.loads(res.text)
+    activeList=data[&#39;activeList&#39;]
+    #print(activeList)
+    for item in activeList:
+        if(&quot;nameTwo&quot; not in item):
+            continue
+        if(item[&#39;activeType&#39;]==2 and item[&#39;status&#39;]==1):
+            signurl=item[&#39;url&#39;]
+            aid = getvar(signurl)
+            if(aid not in activates):
+                print(&quot;【签到】查询到待签到活动 活动名称:%s 活动状态:%s 活动时间:%s aid:%s&quot;%(item[&#39;nameOne&#39;],item[&#39;nameTwo&#39;],item[&#39;nameFour&#39;],aid))
+                sign(aid,uid)   
+
+def getvar(url):
+    var1 = url.split(&quot;&amp;&quot;)
+    for var in var1:
+        var2 = var.split(&quot;=&quot;)
+        if(var2[0]==&quot;activePrimaryId&quot;):
+            return var2[1]
+    return &quot;ccc&quot;    
+
+
+
+def sign(aid,uid):
+    global status,activates
+    url=&quot;https://mobilelearn.chaoxing.com/pptSign/stuSignajax?activeId=&quot;+aid+&quot;&amp;uid=&quot;+uid+&quot;&amp;clientip=&amp;latitude=-1&amp;longitude=-1&amp;appType=15&amp;fid=0&quot;
+    res=requests.get(url,headers=headers)
+    if(res.text==&quot;success&quot;):
+        print(&quot;用户:&quot;+uid+&quot; 签到成功！&quot;)
+        activates.append(aid)
+        status=2
+    else:
+        print(&quot;签到失败&quot;)  
+        activates.append(aid)  
+
+def startsign():
+    global status,status2
+    status=1
+    status2=1
+    ind=1
+    print(&quot;监控启动 监控课程为:%s 监控频率为:%s&quot;%(coursedata[course_index][&#39;name&#39;],str(speed)))
+    while(status!=0 and status2!=0):
+        ind+=1
+        taskactivelist(coursedata[course_index][&#39;courseid&#39;],coursedata[course_index][&#39;classid&#39;])
+        time.sleep(speed)
+        if(status==1):
+            print(str(ind)+&quot; [签到]监控运行中，未查询到签到活动&quot;)
+        elif(status==2):
+            print(str(ind)+&quot; [新签到]监控运行中，未查询到签到活动&quot;)         
+    print(&quot;任务结束&quot;)
+    printdata()
+
+backclazzdata()
+</code></pre>
+<p>填入自己的uid和cookie，运行程序，即可自动签到</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313011350832.png" alt></p>
+<h2 id="关于部署"><a href="#关于部署" class="headerlink" title="关于部署"></a>关于部署</h2><p>要是想自动签到，就要把电脑一直开着嘛，怕浪费电去购买一台windows服务器，用pyinstaller把python直接打包成exe在服务器上运行。</p>
+<p>拿到服务器上运行</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313013556822.png" alt></p>
+<p><img src="https://img-blog.csdnimg.cn/20200313013652561.png" alt></p>
+<p>如果你觉得一个课程不爽的话，你可以重命名，打包多份文件，每一个程序检测一门功课。<br>且程序理论上永远不会终止。只要你打包的足够的多，就相当于告别签到这件事了。</p>
+<p>为了检验程序的正确性，我特地设了一个八点的闹钟（真不想起来–V–）<br>在8.02分的时候点进群里，看了下，已经在8.00的时候完成了签到，看来我的担心是多余的了。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200313143729174.jpg" alt></p>
+<p>好了，啥也没了，就这样吧。(技术无罪！！！手动滑稽)</p>
+<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p><a href="https://www.lanzous.com/iaf7cba" target="_blank" rel="noopener">蓝奏云网盘</a>点击进入输入密码即可<br>密码：pluto</p>
+<h2 id="B站视频地址"><a href="#B站视频地址" class="headerlink" title="B站视频地址"></a>B站视频地址</h2><p><a href="https://www.bilibili.com/video/av94208525" target="_blank" rel="noopener">超星学习通自动签到</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/03/17/微信小程序源码/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://p.ananas.chaoxing.com/star3/270_160c/313bef652109e12a504b11b335346da8.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://p.ananas.chaoxing.com/star3/270_160c/313bef652109e12a504b11b335346da8.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                移动应用开发《微信小程序源码》</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/19/超星学习通自动签到/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/jishu/xuexitongqiandao.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/19/超星学习通自动签到/">
-    超星学习通自动签到</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-19</div>
-    <p>
-    自动签到</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/19/超星学习通自动签到/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/17/利用jsDeliver-github实现免费CDN/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/jishu/mianfeiCDN.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/17/利用jsDeliver-github实现免费CDN/">
-    利用jsDeliver+github实现免费CDN</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-17</div>
-    <p>
-    免费CDN</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/17/利用jsDeliver-github实现免费CDN/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "Mnl8MCBzmd08CY88m3nWAJkc-gzGzoHsz",
+        appKey: "cYEYXbHeXWTJRCgSmUTpevgA",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="http://qbce1999.club/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/custom/avatar.jpg" itemprop="image" alt="Pluto" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="http://qbce1999.club/" itemprop="url" rel="author">Pluto</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>孤独的√3</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
 
-<!-- 
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/19/超星学习通自动签到/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/jishu/xuexitongqiandao.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/19/超星学习通自动签到/">
-    超星学习通自动签到</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-19</div>
-    <p>
-    自动签到</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/19/超星学习通自动签到/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2020/03/17/利用jsDeliver-github实现免费CDN/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
-        </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/bjbuvgu/cdn/img/jishu/mianfeiCDN.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2020/03/17/利用jsDeliver-github实现免费CDN/">
-    利用jsDeliver+github实现免费CDN</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2020-3-17</div>
-    <p>
-    免费CDN</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2020/03/17/利用jsDeliver-github实现免费CDN/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
 
- -->
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
